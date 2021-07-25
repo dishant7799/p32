@@ -33,11 +33,11 @@ function draw(){
     textSize(30);
     
     if(hour>=12){
-        text("Time : "+ hour + " PM", 50,100);
+        text("Time : "+ hour%12 + " PM", 50,100);
     }else if(hour==00){
         text("Time : 12 AM",100,100);
     }else{
-        text("Time : "+ hour + " AM", 50,100);
+        text("Time : "+ hour%12 + " AM", 50,100);
     }
   
    
@@ -58,7 +58,7 @@ async function getBackgroundImg(){
     
 
     // slice the datetime to extract hour
-    var hour = datetime.slice(11,13);
+     hour = datetime.slice(11,13);
     console.log(hour);
 
     
